@@ -22,5 +22,5 @@ cmake ..
 make
 ./particle_filter
 
-![Final Result] (success.png)
+![Final Result](success.png)
 
