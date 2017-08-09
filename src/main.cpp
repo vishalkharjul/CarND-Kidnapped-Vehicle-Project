@@ -71,7 +71,8 @@ int main()
 			double sense_x = std::stod(j[1]["sense_x"].get<std::string>());
 			double sense_y = std::stod(j[1]["sense_y"].get<std::string>());
 			double sense_theta = std::stod(j[1]["sense_theta"].get<std::string>());
-
+            std::cout<<"Initial Measurement:";
+            std::cout<<sense_x<<" "<<sense_y<<" "<<sense_theta<<"\n";
 			pf.init(sense_x, sense_y, sense_theta, sigma_pos);
 		  }
 		  else {

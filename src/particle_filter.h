@@ -79,7 +79,20 @@ public:
 	 * @param observations Vector of landmark observations
 	 */
 	void dataAssociation(std::vector<LandmarkObs> predicted, std::vector<LandmarkObs>& observations);
-	
+
+
+    /**
+	 * weight_prob calculates the weights for each particle based on the likelihood of the
+	 *   observed measurements.
+	 * @param x - x co-ordinate of observation
+	 * @param y - y co-ordinate of observation
+	 * @param xm -  x co-ordinate of associated landmark from map
+	 * @param ym -  x co-ordinate of associated landmark from map
+     * @param std_landmark -  noise of both x and y co-ordinate of associated landmark from map
+	 */
+
+    double weight_prob(double x, double y, float xm, float ym, double std_landmark[]) ;
+
 	/**
 	 * updateWeights Updates the weights for each particle based on the likelihood of the 
 	 *   observed measurements. 
